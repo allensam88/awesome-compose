@@ -4,6 +4,8 @@ services:
     build: backend
     secrets:
       - db-password
+    volumes:
+      - db/password.txt:/run/secrets/db-password
     depends_on:
       - db
   db:
@@ -13,6 +15,7 @@ services:
       - db-password
     volumes:
       - db-data:/var/lib/postgresql/data
+      - db/password.txt:/run/secrets/db-password
     environment:
       - POSTGRES_DB=example
       - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
