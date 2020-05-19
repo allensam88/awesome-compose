@@ -1,1 +1,1 @@
-compose: nextcloud-redis-mariadb/docker-compose.yaml
+compose: nginx-flask-mongo/docker-compose.yaml
