@@ -1,1 +1,1 @@
-compose: nextcloud-postgres/docker-compose.yaml
+compose: nextcloud-redis-mariadb/docker-compose.yaml
