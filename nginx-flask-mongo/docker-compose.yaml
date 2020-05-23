@@ -19,5 +19,7 @@ services:
       - ./flask:/src
     depends_on:
       -  mongo  
+    ports:
+      - 9091:9091
   mongo:
     image: mongo
