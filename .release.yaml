@@ -1,1 +1,1 @@
-compose: nginx-flask-mongo/docker-compose.yaml
+compose: angular/docker-compose.yaml
