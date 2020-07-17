@@ -4,23 +4,30 @@ services:
     build: backend
     ports:
       - "8000"
-    secrets:
-      - db-password
-    volumes:
-      - ./db/password.txt:/run/secrets/db-password
+    environment:
+      - DB_TYPE=postgres
+      - DB_HOST=db:5432
+      - DB_NAME=yes
+      - DB_USER=yes
+      - DB_PASSWD=yes
+#     secrets:
+#       - db-password
+#     volumes:
+#       - ./db/password.txt:/run/secrets/db-password
     depends_on:
       - db
   db:
     image: postgres
     restart: always
-    secrets:
-      - db-password
+#     secrets:
+#       - db-password
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ./db/password.txt:/run/secrets/db-password
+#       - ./db/password.txt:/run/secrets/db-password
     environment:
-      - POSTGRES_DB=example
-      - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
+      - POSTGRES_USER=yes
+      - POSTGRES_PASSWORD=yes
+      - POSTGRES_DB=yes
     
   proxy:
     build: proxy
@@ -30,6 +37,6 @@ services:
       - backend
 volumes:
   db-data:
-secrets:
-  db-password:
-    file: db/password.txt
+# secrets:
+#   db-password:
+#     file: db/password.txt
