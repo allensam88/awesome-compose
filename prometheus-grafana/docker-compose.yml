@@ -7,7 +7,7 @@ services:
       - ./prometheus:/etc/prometheus
       - prom_data:/prometheus
     command:
-      - 'prometheus -config.file=/etc/prometheus/prometheus.yml'
+      - '--config.file=/etc/prometheus/prometheus.yml'
     ports:
       - 9090:9090
     restart: unless-stopped
