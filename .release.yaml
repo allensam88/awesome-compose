@@ -1,1 +1,1 @@
-compose: react-java-mysql/docker-compose.yaml
+compose: prometheus-grafana/docker-compose.yml
