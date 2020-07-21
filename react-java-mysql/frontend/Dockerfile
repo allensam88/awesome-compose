@@ -10,7 +10,7 @@ COPY . /code
 ENV CI=true
 ENV PORT=3000
 
-CMD [ "npm", "start", "--disableHostCheck", "true", ]
+CMD [ "npm", "start", "--disableHostCheck", "true" ]
 
 FROM development AS build
 
