@@ -1,1 +1,1 @@
-compose: react-java-mysql/docker-compose.yaml
+compose: react-rust-postgres/docker-compose.yaml
