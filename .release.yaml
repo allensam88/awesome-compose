@@ -1,1 +1,9 @@
+version: v1
+app: angular
 compose: angular/docker-compose.yml
+builds:
+  - name: frontend
+    build_base: frontend
+    build_command: GENERATE_SOURCEMAP=false yarn build
+    build_directory: build
+    static: false
