@@ -1,1 +1,1 @@
-compose: angular/docker-compose.yml
+compose: nextcloud-redis-mariadb/docker-compose.yml
