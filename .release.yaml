@@ -1,1 +1,1 @@
-compose: gitea-postgres/docker-compose.yml
+compose: nextcloud-postgres/docker-compose.yml
