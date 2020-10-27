@@ -1,1 +1,1 @@
-compose: spring-postgres/docker-compose.yml
+compose: traefik-golang/docker-compose.yml
